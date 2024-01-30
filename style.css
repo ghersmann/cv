@@ -5,6 +5,11 @@ html {
   color: black;
 }
 
+::selection {
+  background-color: darkslategray;
+  color: white;
+}
+
 h1 {
   font-family: Sentient, Garamond, Georgia, "Times New Roman", Times, serif;
 }
@@ -71,4 +76,8 @@ a:active {
 .greenheader a:active {
   color: gainsboro;
   background-color: maroon;
+}
+
+.greenp::after {
+  content: " 📷";
 }
