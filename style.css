@@ -1,0 +1,32 @@
+html {
+  box-sizing: border-box;
+  font-family: Satoshi, Arial, Helvetica, sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: Sentient, Garamond, serif;
+}
+
+main {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.header {
+  text-align: center;
+  padding: 40px 16px;
+  background-color: darkslategray;
+  color: gainsboro;
+}
+
+a {
+  color: gainsboro;
+}
