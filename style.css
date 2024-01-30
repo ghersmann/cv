@@ -1,18 +1,47 @@
 html {
   box-sizing: border-box;
-  font-family: Satoshi, Arial, Helvetica, sans-serif;
+  font-family: Satoshi, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: black;
 }
 
-body {
-  margin: 0;
+h1 {
+  font-family: Sentient, Garamond, Georgia, "Times New Roman", Times, serif;
 }
 
-h1,
 h2,
 h3,
 h4,
 h5 {
-  font-family: Sentient, Garamond, serif;
+  font-family: Satoshi, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+article {
+  padding-bottom: 30px;
+}
+
+article + article {
+  border-top: 3px solid darkslategray;
+}
+
+.greenheader {
+  text-align: center;
+  padding: 60px;
+  background-color: darkslategray;
+  color: gainsboro;
+}
+
+.greenheader a {
+  color: gainsboro;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.greenheader p {
+  padding: 20px;
 }
 
 main {
@@ -20,13 +49,26 @@ main {
   margin: 0 auto;
 }
 
-.header {
-  text-align: center;
-  padding: 40px 16px;
-  background-color: darkslategray;
-  color: gainsboro;
+a {
+  color: maroon;
 }
 
-a {
+a:hover {
+  color: navajowhite;
+  background-color: maroon;
+}
+
+a:active {
+  color: navajowhite;
+  background-color: darkslategray;
+}
+
+.greenheader a:hover {
+  color: darkslategray;
+  background-color: navajowhite;
+}
+
+.greenheader a:active {
   color: gainsboro;
+  background-color: maroon;
 }
