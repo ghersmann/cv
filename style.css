@@ -111,3 +111,11 @@ article {
 article + article {
   border-top: 3px solid darkslategray;
 }
+
+.experience-heading {
+  display: inline-block;
+}
+
+.experience-subheading {
+  display: inline-block;
+}
