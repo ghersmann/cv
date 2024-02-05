@@ -82,7 +82,7 @@ ul {
 .greenheader {
   text-align: center;
   padding: 3rem;
-  background-color: darkslategray;
+  background-image: linear-gradient(#203737, #436060);
   color: gainsboro;
   position: relative;
 }
@@ -152,6 +152,13 @@ article + article {
   position: relative;
   left: 1rem;
   max-width: 55ch;
+}
+
+footer {
+  color: gainsboro;
+  background-image: linear-gradient(#436060, #203737);
+  height: 5rem;
+  padding: 0.7rem;
 }
 
 @media screen {
