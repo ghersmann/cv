@@ -105,6 +105,19 @@ ul {
   position: relative;
 }
 
+.greenheader .aside-hireme {
+  transition: transform 150ms;
+  transform-origin: 100% 0 0;
+}
+
+.greenheader:hover .aside-hireme,
+.greenheader:focus-within .aside-hireme {
+  transform: scale(1.5);
+  opacity: 1;
+  outline-color: var(--select-text);
+  outline-style: dotted;
+}
+
 .divheader {
   font-size: 3rem;
 }
@@ -127,6 +140,7 @@ ul {
   text-align: center;
   border-radius: 0.2rem;
   padding: 0.6rem;
+  opacity: 0.5;
 }
 
 .greenheaderlink {
