@@ -18,21 +18,34 @@
   font-style: normal;
 }
 
-html {
-  color: black;
-  font-family: Satoshi, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-    Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  font-size: 16px;
-  padding: 1rem;
-  position: relative;
-  max-width: 60%;
-  margin: 0 auto;
-}
-
 *,
 ::after,
 ::before {
   box-sizing: border-box;
+}
+
+body {
+  --text-color: black;
+  --darkgreen-gradient: #203737;
+  --lightgreen-gradient: #436060;
+  --text-green-bg: gainsboro;
+  --link-green-hover-bg: maroon;
+  --a-active-text: navajowhite;
+  --a-active-bg: darkslategray;
+  --select-text: white;
+  --aside-hireme: hotpink;
+  --dark-text: gainsboro;
+  --dark-bg: #203737;
+}
+
+html {
+  color: var(--text-color);
+  font-family: Satoshi, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 16px;
+  position: relative;
+  max-width: 60%;
+  margin: 0 auto;
 }
 
 h2 {
@@ -57,17 +70,17 @@ h1 {
 }
 
 a {
-  color: maroon;
+  color: var(--link-green-hover-bg);
 }
 
 a:hover {
-  color: navajowhite;
-  background-color: maroon;
+  color: var(--a-active-text);
+  background-color: var(--link-green-hover-bg);
 }
 
 a:active {
-  color: navajowhite;
-  background-color: darkslategray;
+  color: var(--a-active-text);
+  background-color: var(--a-active-bg);
 }
 
 ul {
@@ -75,15 +88,18 @@ ul {
 }
 
 ::selection {
-  background-color: darkslategray;
-  color: white;
+  background-color: var(--a-active-bg);
+  color: var(--select-text);
 }
 
 .greenheader {
   text-align: center;
   padding: 3rem;
-  background-image: linear-gradient(#203737, #436060);
-  color: gainsboro;
+  background-image: linear-gradient(
+    var(--darkgreen-gradient),
+    var(--lightgreen-gradient)
+  );
+  color: var(--text-green-bg);
   position: relative;
 }
 
@@ -104,15 +120,15 @@ ul {
   position: absolute;
   right: 1.5rem;
   top: 1.5rem;
-  background-color: hotpink;
-  color: black;
+  background-color: var(--aside-hireme);
+  color: var(--text-color);
   text-align: center;
   border-radius: 0.2rem;
   padding: 0.6rem;
 }
 
 .greenheaderlink {
-  color: gainsboro;
+  color: var(--text-green-bg);
   padding: 1rem;
 }
 
@@ -126,13 +142,13 @@ nav {
 }
 
 .greenheaderlink:hover {
-  color: darkslategray;
-  background-color: navajowhite;
+  color: var(--a-active-bg);
+  background-color: var(--a-active-text);
 }
 
 .greenheaderlink:active {
-  color: gainsboro;
-  background-color: maroon;
+  color: var(--text-green-bg);
+  background-color: var(--link-green-hover-bg);
 }
 
 article {
@@ -140,7 +156,7 @@ article {
 }
 
 article + article {
-  border-top: 3px solid darkslategray;
+  border-top: 3px solid var(--a-active-bg);
 }
 
 .h3-subheading-flex {
@@ -155,8 +171,11 @@ article + article {
 }
 
 footer {
-  color: gainsboro;
-  background-image: linear-gradient(#436060, #203737);
+  color: var(--text-green-bg);
+  background-image: linear-gradient(
+    var(--lightgreen-gradient),
+    var(--darkgreen-gradient)
+  );
   height: 5rem;
   padding: 0.7rem;
 }
@@ -219,5 +238,27 @@ footer {
 @media screen and (min-width: 992px) {
   html {
     font-size: 20px;
+  }
+}
+
+@media screen and (prefers-color-scheme: dark) {
+  body {
+    color: var(--dark-text);
+    background-color: var(--dark-bg);
+  }
+  html {
+    max-width: 100%;
+    margin: 0;
+  }
+  main {
+    max-width: 60%;
+    margin: 0 auto;
+  }
+  a {
+    color: var(--text-green-bg);
+  }
+  .footer-note {
+    max-width: 60%;
+    margin: 0 auto;
   }
 }
