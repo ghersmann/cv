@@ -238,7 +238,7 @@ footer {
   }
 }
 
-@media screen and (min-width: 786px) {
+@media screen and (min-width: 768px) {
   html {
     font-size: 18px;
     max-width: 70%;
@@ -255,6 +255,23 @@ footer {
   }
   .h3-subheading-p {
     padding-left: 1rem;
+  }
+
+  .article-grid {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-gap: 0.5rem;
+  }
+  .pbodyindent {
+    left: 0;
+  }
+
+  h3 {
+    margin-top: 3rem;
+  }
+
+  .profile {
+    margin-top: 2rem;
   }
 }
 
